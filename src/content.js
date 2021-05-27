@@ -65,9 +65,11 @@ class Main extends React.Component {
 
 const app = document.createElement('div');
 app.id = 'my-extension-root';
+// let hi = localStorage.getItem('src');
 let hi =
   'https://dongseo.commonscdn.com/contents3/dongseol01/606c570419ce9/contents/media_files/mobile/ssmovie.mp4';
-
+// console.log(hi);
+// console.log('src', window.localStorage.getItem('src'));
 app.style.display = 'none';
 app.style.width = '100%';
 app.style.height = '50%';
@@ -111,30 +113,21 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
     let tagtag = tagname.contentWindow?.document
       .getElementsByTagName('div')[0]
       .getElementsByClassName('xnbc-body')[0];
-    let mainframe = tagname.contentWindow?.document
-      .getElementsByTagName('div')[0]
-      .getElementsByTagName('iframe')[0];
-    let mainframe2 =
-      mainframe?.contentWindow?.document.getElementsByTagName('iframe')[0];
-
+    // let mainframe = tagname.contentWindow?.document
+    //   .getElementsByTagName('div')[0]
+    //   .getElementsByTagName('iframe')[0];
+    // let mainframe2 =
+    //   mainframe?.contentWindow?.document.getElementsByTagName('iframe')[0];
+    console.log(app);
+    app.style.display = 'block';
     tagtag.innerHTML = '';
     tagtag.appendChild(app);
-    app.style.display = 'block';
-
     // console.log(
     //   'player-area',
     //   mainframe2.contentWindow.document.getElementById('player-area')
     // );
-    // hi = mainframe2.getAttribute('src');
-    console.log(mainframe2.getAttribute('src'));
-    console.log(URL.createObjectURL(mainframe2.getAttribute('src')));
-
-    console.log(
-      'player-area',
-      mainframe2.contentWindow.document.getElementById('60407d8a30d63-page')
-    );
-
-    toggle();
+    // console.log(window.onload(mainframe2.getAttribute('src')));
+    // toggle();
   }
 });
 
