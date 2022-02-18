@@ -14,5 +14,6 @@ video mark system
             - antd , video.js , react-draft-wysiwyg 라이브러리 활용
 
 notion : https://www.notion.so/ba217999806b45b5bb7975b4f1b47491
+구현 영상 : https://drive.google.com/drive/folders/1MZRDNATnnBLGXPuTSno-YiSe-46qYH6K
 
 
